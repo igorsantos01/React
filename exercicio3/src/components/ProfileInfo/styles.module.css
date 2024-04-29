@@ -1,0 +1,10 @@
+.profileInfo {
+  width: 19rem;
+  line-height: 2.8rem;
+  text-align: center;
+}
+
+.profileInfo p,
+h2 {
+  border-bottom: #1e61a9 0.05rem solid;
+}
