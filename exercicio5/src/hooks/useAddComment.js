@@ -13,7 +13,7 @@ function formatData() {
 }
 
 const useAddComment = () => {
-  const [comments] = useState([]);
+  const [comments, setComments] = useState([]);
   const [email, setEmail] = useState("");
   const [text, setText] = useState("");
 
@@ -26,7 +26,8 @@ const useAddComment = () => {
 
   function createComment() {
     const nowTime = formatData();
-    comments.unshift({ email, date: nowTime, text });
+    const newComment = { email, date: nowTime, text };
+    setComments([newComment, ...comments]);
     setEmail("");
     setText("");
   }
